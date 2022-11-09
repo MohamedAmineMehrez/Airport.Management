@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pc-Nabil\\source\\repos\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {}
+    "C:\\Users\\EXTRA\\Desktop\\4éme\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pc-Nabil\\source\\repos\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
+    "C:\\Users\\EXTRA\\Desktop\\4éme\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pc-Nabil\\source\\repos\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+        "projectUniqueName": "C:\\Users\\EXTRA\\Desktop\\4éme\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
         "projectName": "AM.ApplicationCore",
-        "projectPath": "C:\\Users\\Pc-Nabil\\source\\repos\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
-        "packagesPath": "C:\\Users\\Pc-Nabil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pc-Nabil\\source\\repos\\AirportManagement\\AM.ApplicationCore\\obj\\",
+        "projectPath": "C:\\Users\\EXTRA\\Desktop\\4éme\\AirportManagement\\AM.ApplicationCore\\AM.ApplicationCore.csproj",
+        "packagesPath": "C:\\Users\\EXTRA\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\EXTRA\\Desktop\\4éme\\AirportManagement\\AM.ApplicationCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Pc-Nabil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\EXTRA\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
