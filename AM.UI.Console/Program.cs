@@ -55,4 +55,15 @@ internal class Program
         //p1.ToString();
         
     }
+    static void insertData()
+    {
+        //Insert Plane
+        AMContext ctx  = new AMContext();
+        UnitOfWork uw = new UnitOfWork(ctx, typeof(GenericRepository<>));
+        ServicePlane sp = new ServicePlane(uw);
+        sp.Add(TestData.Airbusplane);
+        sp.Add(TestData.BoingPlane);
+        sp.Commit();
+        //a completer with flight ticket and passenger insertion
+    }
 }

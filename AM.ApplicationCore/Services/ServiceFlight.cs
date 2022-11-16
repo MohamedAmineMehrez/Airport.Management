@@ -8,8 +8,13 @@ using System.Threading.Tasks;
 
 namespace AM.ApplicationCore.Services
 {
-    public class ServiceFlight: IServiceFlight
+    public class ServiceFlight:Service<Flight>,IServiceFlight
     {
+        private readonly IUnitOfWork unitofwork;
+        public ServiceFlight(IUnitOfWork unitOfWork) : base(unitOfWork)
+        {
+            this.unitofwork = unitOfWork;
+        }
         public List<Flight> Flights { get; set; }
 
         public List<DateTime> GetFlightDates(string destination)
@@ -141,14 +146,14 @@ namespace AM.ApplicationCore.Services
                 }
             }
         }
-        public Action<Plane> FlightDetailsDel;
-        public Func<string, double> DurationAverageDel;
-        public ServiceFlight()
-        {
-            DurationAverageDel = DurationAverage;
-            FlightDetailsDel = ShowFlightDetails;
+        //public Action<Plane> FlightDetailsDel;
+        //public Func<string, double> DurationAverageDel;
+        //public ServiceFlight()
+        //{
+        //    DurationAverageDel = DurationAverage;
+        //    FlightDetailsDel = ShowFlightDetails;
             
-        }
+        //}
     }
     
 }

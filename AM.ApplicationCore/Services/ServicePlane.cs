@@ -9,33 +9,34 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AM.ApplicationCore.Services
 {    
-    public class ServicePlane : IservicePlane
+    public class ServicePlane : Service<Plane>,IservicePlane
     {
         private IGenericRepository<Plane> genericRepository;
         //public ServicePlane(IGenericRepository<Plane> genericRepository)
         //{
         //    this.genericRepository = genericRepository;
         //}
-        private IUnitOfWork unitofwork;
-        public ServicePlane(IUnitOfWork unitOfWork)
+        private readonly IUnitOfWork unitofwork;
+        public ServicePlane(IUnitOfWork unitOfWork):base(unitOfWork)
         {
             this.unitofwork = unitOfWork;
         }
-        public void Add(Plane plane)
-        {
-            unitofwork.Repository<Plane>().Add(plane);
-        }
 
-        public IList<Plane> GetAll()
-        {
+        //public void Add(Plane plane)
+        //{
+        //    unitofwork.Repository<Plane>().Add(plane);
+        //}
+
+        //public IList<Plane> GetAll()
+        //{
            
-            return unitofwork.Repository<Plane>().GetAll().ToList();
-        }
+        //    return unitofwork.Repository<Plane>().GetAll().ToList();
+        //}
 
-        public void Remove(Plane plane)
-        {
-           unitofwork.Repository<Plane>().Delete(plane);
-        }
+        //public void Remove(Plane plane)
+        //{
+        //   unitofwork.Repository<Plane>().Delete(plane);
+        //}
         //public void Add(Plane plane)
         //{
         //    genericRepository.Add(plane);
